@@ -12,6 +12,7 @@ import { LineIndex, joinPath, normalizeUrlPath, snake, uniq, stripExt } from '..
 
 const ROUTE_VERBS = 'get|post|put|patch|delete|options|head|match|add|cli|resource|presenter|group|view|addRedirect|environment|map';
 
+
 interface RouteCtx {
   prefix: string;
   filters: string[];
