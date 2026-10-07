@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block content %}
+{% for p in products %}<a href="{% url 'shop:edit' p.pk %}">{{ p.name }}</a>{% endfor %}
+{% endblock %}

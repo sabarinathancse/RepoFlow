@@ -1,0 +1,41 @@
+{
+  "name": "repoflow",
+  "version": "0.1.0",
+  "description": "Scan any existing project (PHP, Python, Node.js) and generate a standalone interactive project explorer in repoflow/.",
+  "keywords": [
+    "codeigniter",
+    "laravel",
+    "django",
+    "fastapi",
+    "flask",
+    "express",
+    "documentation",
+    "static-analysis",
+    "architecture",
+    "project-explorer"
+  ],
+  "license": "MIT",
+  "author": "Sabarinathan Kalidass",
+  "bin": {
+    "repoflow": "dist/cli/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && node scripts/copy-assets.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "scan": "node dist/cli/index.js scan",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}

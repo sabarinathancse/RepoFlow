@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="RepoFlow {{VERSION}}">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="layout">
+<nav class="side" aria-label="Sections">
+  <div class="brand" id="brand"></div>
+  <div class="brand-sub" id="brandSub"></div>
+  <div class="gsearch">
+    <input class="search" id="globalSearch" type="search" placeholder="Search routes, code, views, tables…" aria-label="Search the project" autocomplete="off">
+    <div class="gresults card" id="globalResults" hidden></div>
+  </div>
+  <div id="navlist" role="list"></div>
+  <div class="side-foot" id="sideFoot"></div>
+</nav>
+<main id="main" tabindex="-1"></main>
+</div>
+<noscript><p style="padding:24px">This report needs JavaScript. The same data is in project-graph.json and project-summary.md next to this file.</p></noscript>
+<script id="repoflow-graph" type="application/json">{{GRAPH}}</script>
+<script id="repoflow-manifest" type="application/json">{{MANIFEST}}</script>
+<script>
+{{JS}}
+</script>
+</body>
+</html>
